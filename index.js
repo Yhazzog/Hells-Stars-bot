@@ -7,7 +7,7 @@ const Discord = require('discord.js'),
     config = require('./config.json')
     fs = require("fs")
 
-client.login(config.token)
+client.login(process.env.token)
 
 fs.readdir("./commands", (err, files) => {
     if (err) throw err
